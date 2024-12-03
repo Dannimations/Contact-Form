@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap');
+body{
+    background-color: #e0f1e7;
+    font-family: Karla;
+    padding-top: 2em;
+}
+.mainContainer{
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+}
+form input{
+    border-radius: .6rem;
+    border: none;
+    border: 1px solid #ccc;
+}
+form input:hover{
+    border: 1px solid #0c7d69;
+}
+.formAlert{
+    display: none;
+    color: red;
+    margin-top: .5rem;
+    /* border: 1px solid; */
+}
+.box input{
+    width: 100%;
+    height: 2.8rem;
+    margin-top: 5px;
+}
+.box{
+    margin-top: 1em;
+}
+.box input::selection{
+    background-color: #063f36;
+}
+.radioBox{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    gap: 1rem;
+    border: 1px solid;
+    border-radius: .6rem;
+    border: none;
+    border: 1px solid #ccc;
+    width: 95%;
+    height: 2.8rem;
+    margin-top: 5px;
+}
+#messageBox{
+    height: 10rem;
+    width: 100%;
+}
+span{
+    color: #0c7d69;
+}
+button{
+    margin-top: 2rem;
+    border-radius: .6rem;
+    border: none;   
+    width: 100%;
+    height: 2.8rem;
+    background-color: #0c7d69;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #063f36;
+}
+#form input[type='radio']{
+    appearance: none;
+    width: .5rem;
+    height: .5rem;
+    outline: 2px solid #0c7d69;
+    outline-offset: 3px;
+    border-radius: 50%;
+}
+#form input[type='radio']:checked{
+    background-color: #188070;
+}
+.successMessage{
+    background-color: #063f36;
+    color: #188070;
+    width: max-content;
+    padding: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: .35rem;
+}
+.successMessage.active{
+    display: block;
+    pointer-events: all;
+    animation-name: fadeOut;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+.successMessage.messageHeader{
+    color: white;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+@keyframes fadeOut{
+    0%, 25%, 50%, 75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@media (max-width: 500px){
+    .mainContainer{
+        width: auto;
+    }
+}
+@media (min-width: 800px){
+    
+    .mainContainer{
+        width: 60%;
+        margin: 0 auto;
+    }
+}
